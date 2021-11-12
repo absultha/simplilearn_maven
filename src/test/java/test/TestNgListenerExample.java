@@ -13,7 +13,7 @@ import org.testng.ITestNGListener;
 import org.testng.ITestResult;
 import org.testng.internal.annotations.IListeners;
 
-public class TestNgLIstenerExample implements ITestListener {
+public class TestNgListenerExample implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
@@ -27,16 +27,6 @@ public class TestNgLIstenerExample implements ITestListener {
 
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
-		
-	}
-
-	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
 		WebDriver driver=Baseclass.driver;
 		TakesScreenshot tsObj = (TakesScreenshot) driver;
         File image = tsObj.getScreenshotAs(OutputType.FILE);
@@ -47,7 +37,17 @@ public class TestNgLIstenerExample implements ITestListener {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}	
+	}
+
+	public void onTestSkipped(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	public void onStart(ITestContext context) {

@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
-    <listener class-name="test.TestNgLIstenerExample"/>
+    <listener class-name="test.TestNgListenerExample"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <parameter name="UserName" value="abc@abc.com"/>

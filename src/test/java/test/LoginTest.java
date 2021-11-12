@@ -42,20 +42,6 @@ test=report.startTest("positive Login Test");
 
      }
 
-@Test
- public void ExcelTest( ) throws IOException
-     {
-	
-    String UserNameVal =sheet.getRow(1).getCell(0).getStringCellValue();
-    String PasswordVal =sheet.getRow(1).getCell(1).getStringCellValue();
-    
-    test=report.startTest("Negative Login Test");
-     LoginPage login=new LoginPage();
-     login.Login(UserNameVal,PasswordVal);
-    
-     report.endTest(test);
-
-     }
 
 }
 
